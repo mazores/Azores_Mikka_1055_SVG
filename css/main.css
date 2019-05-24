@@ -23,12 +23,13 @@ nav {
 	padding-top: 20px;
 }
 
-.logo h1 {
+.logo h3 {
 	width: 200px;
 	font-family: 'Hind', sans-serif;
 	font-weight: 700;
 	font-size: 50px;
 	color: #e51e46;
+	text-shadow: 2px 2px 0 #ffffff;
 }
 
 .navmenu {
@@ -71,7 +72,7 @@ nav {
 	font-size: 36px;
 	text-align: center;
 	color: #f48002;
-	text-shadow: 2px 2px 0px #cc6600;
+	text-shadow: 2px 2px 0 #cc6600;
 }
 
 /* ICONS */

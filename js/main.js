@@ -3,41 +3,70 @@
 	
 	console.log('my JS is workin!');
 
-//	let	svgColor = document.querySelector(".svg-icon"),
-//		svgBackground = document.querySelector(".icon");
+	let	
+		showText = document.querySelectorAll(".iconDesc p"),
+		allBackgrounds = document.querySelectorAll(".icon"),
+		allImages = document.querySelectorAll(".icon img");
 
-//	function mouseoverColor() {
-//		svgColor.classList.toggle("svg-icon-hover");
-//		svgBackground.classList.toggle("icon-hover");
-//	}
 
-//	function mouseoutColor() {
-//		svgColor.classList.toggle("svg-icon-hover", false);
-//		svgBackground.classList.toggle("icon-hover");		
-//	}
 
-//	function logTheSVG() {
-//		console.log(this.id);
-//	}
+	function mouseoverColor() {
+		this.classList.toggle("svg-icon-hover");
+		this.classList.toggle("icon-hover");
+	}
 
-	//events always go down here
-	// when someone clicks on you then this happens
-// svgGraphic.addEventListener("click", logMyId);
-//swapTextButton.addEventListener("click", swapText);
+	function mouseoutColor() {
+		this.classList.toggle("svg-icon-hover", false);
+		this.classList.toggle("icon-hover", false);
+	}
 
-// svgColor.addEventListener("mouseover", mouseoverColor);
+	function clickColor() {
+		this.classList.toggle("svg-icon-click");
+		this.classList.toggle("icon-click");
+	}
 
-// svgColor.addEventListener("mouseleave", mouseoutColor);
+	function logTheSVG() {
+		console.log(this.id);
+	}
 
-// svgColor.addEventListener("click", logTheSVG);
 
-///
-//allImages.forEach(item=> {
-//	item.addEventListener("click", logMyId);
-//})
 
-// the button beside the svg objectButton
-//objectButton.addEventListener("click", logTheSVG);
-///
+//When hovered, icon becomes colored
+allImages.forEach(item=> {
+	item.addEventListener("mouseover", mouseoverColor);
+})
+
+//When hovered, background disappears and red border appears
+allBackgrounds.forEach(item=> {
+	item.addEventListener("mouseover", mouseoverColor);
+})
+
+//For going back to original state when mouse stops hovering
+allImages.forEach(item=> {
+	item.addEventListener("mouseleave", mouseoutColor);
+})
+
+allBackgrounds.forEach(item=> {
+	item.addEventListener("mouseleave", mouseoutColor);
+})
+
+
+//When clicked, icon stays colored and border turns yellow
+allImages.forEach(item=> {
+	item.addEventListener("click", clickColor);
+})
+
+allBackgrounds.forEach(item=> {
+	item.addEventListener("click", clickColor);
+})
+
+allImages.forEach(item=> {
+	item.addEventListener("click", showDesc);
+})
+
+//Logs
+allImages.forEach(item=> {
+	item.addEventListener("click", logTheSVG);
+})
 
 })();

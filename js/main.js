@@ -31,6 +31,7 @@
 
 
 
+
 //When hovered, icon becomes colored
 allImages.forEach(item=> {
 	item.addEventListener("mouseover", mouseoverColor);
@@ -58,10 +59,6 @@ allImages.forEach(item=> {
 
 allBackgrounds.forEach(item=> {
 	item.addEventListener("click", clickColor);
-})
-
-allImages.forEach(item=> {
-	item.addEventListener("click", showDesc);
 })
 
 //Logs
